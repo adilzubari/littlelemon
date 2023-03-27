@@ -2,7 +2,7 @@
 
 ![alt text](https://img.shields.io/badge/Django-4.1.5-red?style=for-the-badg&$logo=Django)
 
-This project was created over the course of theduration of taking the Django Full-Stack Development course on coursera.
+This project was created over the course of the duration of taking the Django Full-Stack Development course on coursera.
 
 :star: Star us on GitHub — it motivates us a lot!
 
