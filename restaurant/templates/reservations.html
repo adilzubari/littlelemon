@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1>Reservations</h1>
+
+  <!-- Show no bookings message if applicable -->
+  {% if no_bookings_message %}
+  <p>{{ no_bookings_message }}</p>
+  {% endif %}
+
+  <!-- This is where the JSON data will be displayed -->
+  <pre id="json-data"></pre>
+
+  <script>
+    // Correctly render JSON data in JavaScript by wrapping it in quotes and using the |escapejs filter
+    const jsonData = JSON.parse("{{ bookings_json|escapejs }}");
+
+    // Displaying the formatted JSON in the <pre> tag
+    document.getElementById("json-data").textContent = JSON.stringify(
+      jsonData,
+      null,
+      2
+    );
+  </script>
+</div>
+{% endblock %}
